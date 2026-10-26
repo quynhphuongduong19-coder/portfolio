@@ -551,7 +551,7 @@ button { cursor: pointer; }
   .hero__title { font-size: 40px; line-height: 48px; letter-spacing: -1.2px; }
   .hero__desc { font-size: 16px; line-height: 24px; }
   .hero__stat { position: relative; order: 1; padding: 0 20px 2px; }
-  .stat-card { flex-direction: row; align-items: center; gap: 10px; padding: 0; background: none; border-radius: 0; }
+  .stat-card { flex-direction: row; align-items: center; gap: 10px; padding: 0; background: none; border-radius: 0; -webkit-backdrop-filter: none; backdrop-filter: none; }
   .avatars > img, .avatars__more { width: 32px; height: 32px; }
   .avatars__more { border-width: 1px; }
   .stat-card__text { gap: 0; }
