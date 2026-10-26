@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>UPWealth - Cùng bạn kiến tạo tương lai thịnh vượng</title>
+<meta name="description" content="Khám phá thông tin thị trường, nâng cao kiến thức và tiếp cận những giải pháp tài chính phù hợp với từng hành trình.">
+<link rel="icon" href="assets/logo-mark.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mona+Sans:wght@400;500&family=Inter+Tight:wght@600&family=Inter:wght@400&family=Hanken+Grotesk:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ============ Navbar ============ -->
+<header class="navbar" id="top">
+  <a class="brand" href="#top" aria-label="UPWealth - Trang chủ">
+    <img class="brand__mark" src="assets/logo-mark.svg" alt="" width="28" height="28">
+    <span class="brand__name">UPWealth</span>
+  </a>
+
+  <nav class="nav" id="nav" aria-label="Điều hướng chính">
+    <a class="nav__item is-active" href="#top" aria-current="page">Trang chủ</a>
+    <a class="nav__item" href="#news">Tin tức &amp; Góc nhìn</a>
+    <a class="nav__item" href="#knowledge">Kiến thức đầu tư</a>
+    <a class="nav__item" href="#about">Về UPWealth</a>
+    <a class="nav__item nav__item--mobile-only" href="#contact">Liên hệ</a>
+  </nav>
+
+  <div class="navbar__cta">
+    <a class="btn btn--dark" href="#contact">
+      Liên hệ
+      <img src="assets/arrow-right-white.svg" alt="" width="20" height="20">
+    </a>
+    <button class="icon-btn" type="button" aria-label="Ngôn ngữ">
+      <img src="assets/icon-global.svg" alt="" width="20" height="20">
+    </button>
+  </div>
+
+  <button class="menu-btn" type="button" aria-label="Mở menu" aria-controls="nav" aria-expanded="false">
+    <img src="assets/icon-menu.svg" alt="" width="20" height="20">
+  </button>
+</header>
+
+<main>
+
+  <!-- ============ Hero ============ -->
+  <section class="hero">
+    <div class="hero__card">
+      <div class="hero__media" aria-hidden="true">
+        <img src="assets/hero.png" alt="">
+      </div>
+
+      <div class="hero__content">
+        <div class="hero__text">
+          <h1 class="hero__title">Cùng bạn kiến tạo tương lai thịnh vượng</h1>
+          <p class="hero__desc">Khám phá thông tin thị trường, nâng cao kiến thức và tiếp cận những giải pháp tài chính phù hợp với từng hành trình.</p>
+        </div>
+        <a class="btn btn--light btn--lg" href="#about">
+          Khám phá ngay
+          <img src="assets/arrow-right-dark.svg" alt="" width="20" height="20">
+        </a>
+      </div>
+
+      <div class="hero__stat">
+        <div class="stat-card">
+          <div class="avatars">
+            <img src="assets/avatar-1.png" alt="">
+            <img src="assets/avatar-2.svg" alt="">
+            <img src="assets/avatar-3.png" alt="">
+            <span class="avatars__more"><img src="assets/icon-add.svg" alt="" width="20" height="20"></span>
+          </div>
+          <div class="stat-card__text">
+            <p class="stat-card__num">30k<span>+</span></p>
+            <p class="stat-card__label">Happy clients we have <br>world-wide.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ Về chúng tôi ============ -->
+  <section class="section services" id="about">
+    <header class="section-head section-head--center">
+      <p class="eyebrow"><img src="assets/dot.svg" alt="" width="8" height="8">Về chúng tôi</p>
+      <h2 class="h3">Đồng hành cùng hành trình tài chính của bạn</h2>
+      <p class="lead">UPWealth hướng tới một điểm đến thuận tiện để tìm hiểu thị trường, cập nhật góc nhìn đa lĩnh vực, xây dựng kiến thức đầu tư và khám phá các giải pháp tài chính từ những đơn vị cung cấp dịch vụ phù hợp.</p>
+    </header>
+
+    <div class="services__grid">
+      <article class="service">
+        <span class="service__icon"><img src="assets/icon-binoculars.svg" alt="" width="24" height="19"></span>
+        <div class="service__body">
+          <h3 class="h6">Thông tin &amp; Góc nhìn</h3>
+          <p>Cập nhật thông tin đa chiều, khám phá những góc nhìn mới và xu hướng nổi bật.</p>
+        </div>
+      </article>
+      <article class="service">
+        <span class="service__icon"><img src="assets/icon-book-star.svg" alt="" width="20" height="22"></span>
+        <div class="service__body">
+          <h3 class="h6">Kiến thức &amp; Trải nghiệm</h3>
+          <p>Chia sẻ kiến thức thực tiễn, kinh nghiệm chuyên sâu và những bài học giá trị.</p>
+        </div>
+      </article>
+      <article class="service">
+        <span class="service__icon"><img src="assets/icon-wallet.svg" alt="" width="22" height="18"></span>
+        <div class="service__body">
+          <h3 class="h6">Không gian mở rộng sản phẩm</h3>
+          <p>Khám phá những ý tưởng, giải pháp và cơ hội phát triển sản phẩm trong tương lai.</p>
+        </div>
+      </article>
+    </div>
+
+    <a class="btn btn--outline" href="#news">
+      Tìm hiểu thêm
+      <img src="assets/arrow-right-black.svg" alt="" width="20" height="20">
+    </a>
+  </section>
+
+  <!-- ============ Hệ sinh thái ============ -->
+  <section class="section ecosystem">
+    <div class="ecosystem__text">
+      <h2 class="h3">Hệ sinh thái</h2>
+      <p class="lead">Cấu trúc mở, sẵn sàng kết nối nhiều sản phẩm và đối tác.</p>
+    </div>
+    <ul class="ecosystem__logos">
+      <li><img src="assets/partner-upsecurities.svg" alt="UP Securities" width="194" height="44"></li>
+      <li><img src="assets/partner-finra.svg" alt="Finra" width="98" height="44"></li>
+      <li><img src="assets/partner-boltx.svg" alt="boltX" width="85" height="44"></li>
+      <li><img src="assets/partner-nomad.svg" alt="Nomad" width="132" height="32"></li>
+    </ul>
+  </section>
+
+  <!-- ============ Câu chuyện khách hàng ============ -->
+  <section class="section stories">
+    <header class="section-head section-head--center">
+      <p class="eyebrow"><img src="assets/dot.svg" alt="" width="8" height="8">Hành trình tài chính</p>
+      <h2 class="h3">Câu chuyện khách hàng</h2>
+      <p class="lead">Những bài toán tài chính thường gặp và hướng tiếp cận phù hợp.</p>
+    </header>
+
+    <div class="carousel" data-carousel>
+      <button class="round-btn round-btn--prev" type="button" data-prev aria-label="Câu chuyện trước">
+        <img src="assets/icon-arrow-akar.svg" alt="" width="24" height="24">
+      </button>
+
+      <div class="carousel__track" data-track>
+        <article class="story" data-slide>
+          <div class="story__photo">
+            <img src="assets/testimonial-1.png" alt="Bạn Gia Huy">
+          </div>
+          <div class="story__card">
+            <div class="story__head">
+              <div>
+                <p class="story__name">Bạn Gia Huy</p>
+                <p class="story__meta">22 tuổi · Sinh viên mới ra trường</p>
+              </div>
+              <span class="tag">Lần đầu đi làm</span>
+            </div>
+            <div class="story__body">
+              <h3 class="h4">Khởi đầu từ khoản lương đầu tiên</h3>
+              <ul class="bullets">
+                <li>Thu nhập chưa cao, chưa biết nên chi tiêu, tiết kiệm hay bắt đầu đầu tư.</li>
+                <li>Học kiến thức nền tảng, trích một phần lương để tích lũy đều đặn và tìm hiểu đầu tư với số vốn nhỏ.</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <button class="round-btn round-btn--next" type="button" data-next aria-label="Câu chuyện tiếp theo">
+        <img src="assets/icon-arrow-akar.svg" alt="" width="24" height="24">
+      </button>
+
+      <div class="dots" data-dots role="tablist" aria-label="Chọn câu chuyện"></div>
+    </div>
+  </section>
+
+  <!-- ============ Chỉ số thị trường ============ -->
+  <section class="section market">
+    <h2 class="h3">Chỉ số thị trường</h2>
+    <div class="market__wrap">
+      <ul class="market__list">
+        <li class="ticker">
+          <img class="ticker__line" src="assets/market-line.svg" alt="" width="20" height="100">
+          <div class="ticker__body">
+            <p class="ticker__name">VN-INDEX</p>
+            <p class="ticker__value">1.760,63</p>
+            <p class="ticker__change is-up"><img src="assets/chevron-up-green.svg" alt="Tăng" width="20" height="20">29.75 %</p>
+          </div>
+        </li>
+        <li class="ticker">
+          <img class="ticker__line" src="assets/market-line.svg" alt="" width="20" height="100">
+          <div class="ticker__body">
+            <p class="ticker__name">VN30</p>
+            <p class="ticker__value">1.893,77</p>
+            <p class="ticker__change is-down"><img src="assets/chevron-up-red.svg" alt="Giảm" width="20" height="20">13.45 %</p>
+          </div>
+        </li>
+        <li class="ticker">
+          <img class="ticker__line" src="assets/market-line.svg" alt="" width="20" height="100">
+          <div class="ticker__body">
+            <p class="ticker__name">HNX-INDEX</p>
+            <p class="ticker__value">261,67</p>
+            <p class="ticker__change is-up"><img src="assets/chevron-up-green.svg" alt="Tăng" width="20" height="20">29.75 %</p>
+          </div>
+        </li>
+        <li class="ticker">
+          <img class="ticker__line" src="assets/market-line.svg" alt="" width="20" height="100">
+          <div class="ticker__body">
+            <p class="ticker__name">UPCOM</p>
+            <p class="ticker__value">1.760,63</p>
+            <p class="ticker__change is-down"><img src="assets/chevron-up-red.svg" alt="Giảm" width="20" height="20">13.45 %</p>
+          </div>
+        </li>
+        <li class="ticker">
+          <img class="ticker__line" src="assets/market-line.svg" alt="" width="20" height="100">
+          <div class="ticker__body">
+            <p class="ticker__name">Vàng SJC</p>
+            <p class="ticker__value">1.760,63</p>
+            <p class="ticker__unit">Triệu đồng/lượng</p>
+          </div>
+        </li>
+        <li class="ticker">
+          <img class="ticker__line" src="assets/market-line.svg" alt="" width="20" height="100">
+          <div class="ticker__body">
+            <p class="ticker__name">Vàng thế giới</p>
+            <p class="ticker__value">1.760,63</p>
+            <p class="ticker__unit">USD/ounce</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ Tin tức nổi bật ============ -->
+  <section class="section news" id="news">
+    <div class="news__intro">
+      <div class="section-head">
+        <h2 class="h3">Tin tức nổi bật</h2>
+        <p class="lead">Tin thị trường, doanh nghiệp và tài chính đáng chú ý</p>
+      </div>
+      <a class="link-btn" href="#news">
+        Xem thêm bài viết
+        <img src="assets/arrow-right-dark.svg" alt="" width="20" height="20">
+      </a>
+    </div>
+
+    <div class="news__slider" data-scroller>
+      <button class="round-btn round-btn--prev" type="button" data-prev aria-label="Bài trước">
+        <img src="assets/icon-arrow-akar.svg" alt="" width="24" height="24">
+      </button>
+      <div class="news__track" data-track>
+        <a class="news-card" href="#news">
+          <div class="news-card__media"><img src="assets/news-1.png" alt=""></div>
+          <div class="news-card__text">
+            <h3 class="h5">Why Most Growth Strategies Fail &amp; How to Prevents It</h3>
+            <time datetime="2026-01-25">Jan 25, 2026</time>
+          </div>
+        </a>
+        <a class="news-card" href="#news">
+          <div class="news-card__media news-card__media--crop"><img src="assets/news-2.png" alt=""></div>
+          <div class="news-card__text">
+            <h3 class="h5">From Vision to Execution Turning Business into Results</h3>
+            <time datetime="2026-01-23">Jan 23, 2026</time>
+          </div>
+        </a>
+      </div>
+      <button class="round-btn round-btn--next" type="button" data-next aria-label="Bài tiếp theo">
+        <img src="assets/icon-arrow-akar.svg" alt="" width="24" height="24">
+      </button>
+    </div>
+  </section>
+
+  <!-- ============ Kiến thức đầu tư ============ -->
+  <section class="section knowledge" id="knowledge">
+    <div class="knowledge__head">
+      <div class="section-head">
+        <h2 class="h3">Kiến thức đầu tư</h2>
+        <p class="lead">Từ kiến thức nền tảng đến cổ phiếu, vàng, bất động sản và tài chính cá nhân</p>
+      </div>
+      <a class="link-btn" href="#knowledge">
+        Xem thêm bài viết
+        <img src="assets/arrow-right-dark.svg" alt="" width="20" height="20">
+      </a>
+    </div>
+
+    <div class="articles">
+      <article class="article">
+        <time datetime="2026-01-25">Jan 25, 2026</time>
+        <div class="article__media"><img src="assets/knowledge-1.png" alt=""></div>
+        <div class="article__content">
+          <div class="article__text">
+            <h3 class="h5">Why Most Growth Strategies Fail &amp; How to Prevents It</h3>
+            <p>Chart the end-to-end customer experience, from awareness to advocacy, exposing winning techniques.</p>
+          </div>
+          <a class="link-btn link-btn--sm" href="#knowledge">Đọc ngay <img src="assets/arrow-right-dark.svg" alt="" width="20" height="20"></a>
+        </div>
+      </article>
+      <article class="article">
+        <time datetime="2026-01-25">Jan 25, 2026</time>
+        <div class="article__media"><img src="assets/knowledge-2.png" alt=""></div>
+        <div class="article__content">
+          <div class="article__text">
+            <h3 class="h5">From Vision to Execution Turning Business into Results</h3>
+            <p>Chart the end-to-end customer experience, from awareness to advocacy, exposing winning techniques.</p>
+          </div>
+          <a class="link-btn link-btn--sm" href="#knowledge">Đọc ngay <img src="assets/arrow-right-dark.svg" alt="" width="20" height="20"></a>
+        </div>
+      </article>
+      <article class="article">
+        <time datetime="2026-01-25">Jan 25, 2026</time>
+        <div class="article__media"><img src="assets/knowledge-3.png" alt=""></div>
+        <div class="article__content">
+          <div class="article__text">
+            <h3 class="h5">Instant Team Integration: Strategies for Success</h3>
+            <p>Chart the end-to-end customer experience, from awareness to advocacy, exposing winning techniques.</p>
+          </div>
+          <a class="link-btn link-btn--sm" href="#knowledge">Đọc ngay <img src="assets/arrow-right-dark.svg" alt="" width="20" height="20"></a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============ CTA app ============ -->
+  <section class="section cta-wrap">
+    <div class="cta">
+      <img class="cta__bg" src="assets/cta-bg.png" alt="" aria-hidden="true">
+      <img class="cta__vector" src="assets/cta-vector.svg" alt="" aria-hidden="true">
+      <div class="cta__content">
+        <div class="cta__text">
+          <p class="cta__kicker"><img src="assets/icon-sparkle.svg" alt="" width="24" height="24">UPWealth Mobile</p>
+          <h2 class="h3">Khám phá UPWealth<br>trên điện thoại</h2>
+          <p class="cta__desc">Theo dõi thị trường, học kiến thức đầu tư và khám phá giải pháp tài chính.</p>
+        </div>
+        <div class="stores">
+          <a class="store" href="#" aria-label="Tải trên Google Play">
+            <img src="assets/icon-google-play.svg" alt="" width="22" height="24">
+            <span><small>Get it on</small><strong>Google Play</strong></span>
+          </a>
+          <a class="store" href="#" aria-label="Tải trên App Store">
+            <img src="assets/icon-apple.svg" alt="" width="20" height="24">
+            <span><small>Download on the</small><strong>App Store</strong></span>
+          </a>
+        </div>
+      </div>
+      <img class="cta__phone" src="assets/cta-phone.png" alt="Ứng dụng UPWealth trên điện thoại">
+    </div>
+  </section>
+
+  <!-- ============ Liên hệ ============ -->
+  <section class="section contact" id="contact">
+    <header class="section-head contact__head">
+      <p class="eyebrow"><img src="assets/dot.svg" alt="" width="8" height="8">Ý kiến của bạn</p>
+      <h2 class="h3">Liên hệ với chúng tôi</h2>
+      <p class="lead">Ý kiến của bạn giúp chúng tôi cải thiện nội dung, sản phẩm và trải nghiệm trên nền tảng.</p>
+    </header>
+
+    <div class="contact__grid">
+      <div class="contact__visual">
+        <img src="assets/contact.png" alt="">
+        <div class="contact__overlay">
+          <div>
+            <h3 class="h4">Bạn muốn trao đổi trực tiếp?</h3>
+            <p>Đội ngũ UPWealth luôn sẵn sàng hỗ trợ và giải đáp thắc mắc của bạn.</p>
+          </div>
+          <a class="btn btn--outline" href="tel:02439446666">
+            Liên hệ ngay
+            <img src="assets/arrow-right-black.svg" alt="" width="20" height="20">
+          </a>
+        </div>
+      </div>
+
+      <form class="form" id="contact-form" novalidate>
+        <div class="field">
+          <label for="f-name">Họ và Tên</label>
+          <div class="input">
+            <img src="assets/icon-mail.svg" alt="" width="20" height="20">
+            <input id="f-name" name="name" type="text" placeholder="Enter your name" autocomplete="name" required>
+          </div>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="f-email">Email</label>
+            <div class="input">
+              <img src="assets/icon-mail.svg" alt="" width="20" height="20">
+              <input id="f-email" name="email" type="email" placeholder="Enter your email" autocomplete="email" required>
+            </div>
+          </div>
+          <div class="field">
+            <label for="f-phone">Điện thoại</label>
+            <div class="input">
+              <img src="assets/icon-call.svg" alt="" width="20" height="20">
+              <input id="f-phone" name="phone" type="tel" placeholder="Enter your number" autocomplete="tel">
+            </div>
+          </div>
+        </div>
+        <div class="field">
+          <label for="f-rating">Bạn đánh giá trải nghiệm thế nào?</label>
+          <div class="input input--select">
+            <select id="f-rating" name="rating">
+              <option value="" selected disabled>Chọn mức đánh giá</option>
+              <option>Rất hài lòng</option>
+              <option>Hài lòng</option>
+              <option>Bình thường</option>
+              <option>Chưa hài lòng</option>
+            </select>
+            <img src="assets/icon-arrow-down.svg" alt="" width="20" height="20">
+          </div>
+        </div>
+        <div class="field">
+          <label for="f-msg">Nội dung góp ý</label>
+          <div class="input input--area">
+            <textarea id="f-msg" name="message" placeholder="Chia sẻ ý kiến của bạn" required></textarea>
+          </div>
+        </div>
+        <div class="form__foot">
+          <button class="btn btn--dark btn--submit" type="submit">
+            Gửi ý kiến
+            <img src="assets/arrow-right-white.svg" alt="" width="20" height="20">
+          </button>
+          <p class="form__status" role="status" aria-live="polite"></p>
+        </div>
+      </form>
+    </div>
+  </section>
+</main>
+
+<!-- ============ Footer ============ -->
+<footer class="footer">
+  <div class="footer__inner">
+    <div class="footer__upper">
+      <div class="footer__brand">
+        <div>
+          <a class="footer__logo" href="#top">
+            <img src="assets/logo-mark-footer.svg" alt="" width="62" height="62">
+            <span>UPWealth</span>
+          </a>
+          <p class="footer__tagline">Cùng bạn kiến tạo tương lai thịnh vượng.</p>
+        </div>
+        <div class="socials">
+          <a href="#" aria-label="Instagram"><img src="assets/icon-instagram.svg" alt="" width="20" height="20"></a>
+          <a href="#" aria-label="X (Twitter)"><img src="assets/icon-twitter.svg" alt="" width="20" height="20"></a>
+          <a href="#" aria-label="Facebook"><img src="assets/icon-facebook.svg" alt="" width="20" height="20"></a>
+          <a href="#" aria-label="LinkedIn"><img src="assets/icon-linkedin.svg" alt="" width="20" height="20"></a>
+        </div>
+      </div>
+
+      <div class="footer__nav">
+        <div class="footer__col footer__col--products">
+          <h3>Sản phẩm &amp; Dịch vụ</h3>
+          <a href="#knowledge">Kiến thức đầu tư</a>
+          <a href="#news">Tin tức &amp; Góc nhìn</a>
+        </div>
+        <div class="footer__col footer__col--about">
+          <h3>Về UPWealth</h3>
+          <a href="#about">Về chúng tôi</a>
+          <a href="#contact">Liên hệ</a>
+        </div>
+        <div class="footer__col footer__col--contact">
+          <h3>Thông tin liên hệ</h3>
+          <a class="contact-line" href="tel:02439446666"><img src="assets/icon-call-calling.svg" alt="" width="20" height="20">(024) 3 944 6666</a>
+          <a class="contact-line" href="mailto:info@UPWealth.com.vn"><img src="assets/icon-sms.svg" alt="" width="20" height="20">info@UPWealth.com.vn</a>
+          <p class="contact-line contact-line--top"><img src="assets/icon-buildings.svg" alt="" width="20" height="20"><span>Tầng 8, Tòa nhà Hapro,<br>11B Cát Linh, TP. Hà Nội</span></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <p class="footer__copy">Copyright © 2026 UPWealth. All Rights Reserved.</p>
+      <a href="#">Chính sách bảo mật</a>
+      <a href="#">Điều khoản sử dụng</a>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
