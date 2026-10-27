@@ -217,16 +217,20 @@ button { cursor: pointer; }
 .service__body { display: flex; flex-direction: column; gap: 8px; }
 .service__body p { color: var(--gray-700); }
 
-/* ============ Ecosystem ============ */
-.ecosystem { background: var(--gray-25); }
-.ecosystem { display: flex; align-items: center; justify-content: space-between; gap: 40px; }
-.ecosystem > * { margin: 0; }
-.ecosystem__text { width: 522px; display: flex; flex-direction: column; gap: 6px; }
-.ecosystem__logos { display: flex; align-items: center; justify-content: flex-end; gap: 52px; flex-wrap: wrap; }
-.ecosystem__logos img { height: 44px; width: auto; }
-.ecosystem__logos li:last-child img { height: 32px; }
+/* ============ Highlights ============ */
+.highlights { background: var(--gray-25); display: flex; align-items: center; justify-content: space-between; gap: 40px; }
+.highlights > * { margin: 0; }
+.highlights__quote { width: 502px; display: flex; flex-direction: column; gap: 32px; }
+.highlights__quote .h3 { max-width: 420px; }
+.highlights__brand { font-size: 18px; line-height: 28px; font-weight: 500; color: var(--gray-950); }
+.highlights__tagline { font-size: 14px; line-height: 20px; color: var(--gray-600); }
+.highlights__stats { display: flex; align-items: flex-start; gap: 80px; }
+.highlight { width: 250px; display: flex; flex-direction: column; gap: 8px; }
+.highlight__num { font-size: 62px; line-height: 72px; font-weight: 500; letter-spacing: -1.24px; color: var(--gray-950); }
+.highlight__num span { color: var(--gray-400); }
+.highlight p:last-child { color: var(--gray-700); }
 @media (min-width: 1441px) {
-  .ecosystem { padding-left: calc((100% - var(--container)) / 2); padding-right: calc((100% - var(--container)) / 2); }
+  .highlights { padding-left: calc((100% - var(--container)) / 2); padding-right: calc((100% - var(--container)) / 2); }
 }
 
 /* ============ Stories carousel ============ */
@@ -244,7 +248,20 @@ button { cursor: pointer; }
     0 6px 6px -3px rgba(23, 23, 23, .04), 0 3px 3px -1.5px rgba(23, 23, 23, .04),
     0 1px 1px -.5px rgba(23, 23, 23, .04);
 }
-.story__photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.story__frame {
+  position: absolute; top: 0; bottom: 0; left: 50%; transform: translateX(-50%);
+  aspect-ratio: 288 / 372; overflow: hidden;
+}
+.story__frame.is-flipped { transform: translateX(-50%) scaleX(-1); }
+.story__frame img {
+  position: absolute; max-width: none;
+  left: var(--l, 0); top: var(--t, 0); width: var(--w, 100%); height: var(--h, 100%);
+  object-fit: cover;
+}
+.story__frame[style] img { object-fit: fill; }
+.story__profile { display: flex; align-items: center; gap: 12px; min-width: 0; }
+.story__avatar { display: none; position: relative; flex: 0 0 56px; height: 56px; overflow: hidden; border-radius: 50%; background: linear-gradient(206.52deg, rgba(132, 204, 22, 0) 41.12%, rgb(132, 204, 22) 85.44%), #f7f7f7; }
+.story__avatar .story__frame { top: 0; bottom: auto; width: 100%; }
 .story__photo::after { content: ""; position: absolute; inset: 0; border-radius: inherit; box-shadow: inset 0 0 6px rgba(255, 255, 255, .24); }
 .story__card {
   flex: 1; min-width: 0; display: flex; flex-direction: column; justify-content: space-between; gap: 32px;
@@ -322,7 +339,7 @@ button { cursor: pointer; }
   display: flex; flex-direction: column; gap: 25px;
   padding: 20px 16px; background: #fff; border-radius: 0 0 32px 32px;
 }
-.news-card__text .h5 { max-width: 330px; }
+.news-card__text .h5 { max-width: 330px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
 .news-card time { font-size: 14px; line-height: 20px; font-weight: 500; color: var(--gray-700); }
 .news__slider .round-btn { position: absolute; top: 167px; z-index: 2; }
 .news__slider .round-btn--prev { left: -24px; }
@@ -479,8 +496,8 @@ button { cursor: pointer; }
   .cta__phone { left: auto; right: 0; }
   .footer__upper { flex-direction: column; align-items: flex-start; }
   .footer__brand { width: 100%; }
-  .ecosystem { flex-direction: column; align-items: flex-start; }
-  .ecosystem__logos { justify-content: flex-start; }
+  .highlights { flex-direction: column; align-items: flex-start; }
+  .highlights__quote { width: 100%; }
 }
 
 @media (max-width: 1100px) {
@@ -520,9 +537,9 @@ button { cursor: pointer; }
   .services__grid { grid-template-columns: 1fr; gap: 12px; }
   .service { flex-direction: row; gap: 16px; padding: 20px; }
   .service, .service:nth-child(odd) { background: var(--gray-25); }
-  .story { flex-direction: column; }
-  .story__photo { flex-basis: auto; height: 360px; }
-  .carousel .round-btn { top: 156px; }
+  .story__photo { display: none; }
+  .story__avatar { display: block; }
+  .carousel .round-btn { top: calc((100% - 52px) / 2 - 24px); }
   .knowledge__head { flex-direction: column; align-items: flex-start; gap: 16px; }
   .article { flex-direction: column; gap: 20px; padding-top: 32px; }
   .article__media { flex-basis: auto; width: 100%; height: auto; aspect-ratio: 348 / 200; }
@@ -565,18 +582,23 @@ button { cursor: pointer; }
   .story__head { flex-direction: column; gap: 12px; }
   .bullets li { font-size: 16px; line-height: 24px; }
   .bullets li::before { top: 6px; }
-  .story__photo { height: 300px; }
-  .carousel .round-btn { top: 126px; }
+  .carousel .round-btn { display: none; }
+  .carousel__track { overflow-x: auto; scrollbar-width: none; }
+  .carousel__track::-webkit-scrollbar { display: none; }
   .dots { margin-top: 24px; }
   .ticker { flex-basis: 200px; }
   .market__wrap::after { width: 80px; }
   .news-card { flex-basis: 86%; }
   .news-card__media { height: 200px; }
   .news__slider .round-btn { display: none; }
-  .ecosystem__logos { gap: 28px 36px; }
-  .ecosystem__logos img { height: 36px; }
-  .ecosystem__logos li:last-child img { height: 26px; }
-  .ecosystem__text { width: 100%; }
+  .highlights__quote { gap: 32px; }
+  .highlights__brand { font-size: 16px; line-height: 24px; }
+  .highlights__tagline { font-size: 12px; line-height: 16px; }
+  .highlights__stats { width: 100%; gap: 12px; }
+  .highlight { flex: 1; width: auto; }
+  .highlight__num { font-size: 40px; line-height: 48px; letter-spacing: -0.8px; }
+  .highlight p:last-child { font-size: 14px; line-height: 20px; }
+  .stat-card__label { white-space: normal; }
 
   .cta { border-radius: 32px; padding: 32px 20px 0; }
   .cta-wrap { padding-left: 8px; padding-right: 8px; }
