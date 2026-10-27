@@ -58,12 +58,22 @@
       return b;
     });
 
+    function mark() {
+      dots.forEach(function (d, j) { d.setAttribute("aria-selected", String(j === index)); });
+    }
+
     function go(i) {
       index = (i + slides.length) % slides.length;
       track.scrollTo({ left: slides[index].offsetLeft - track.offsetLeft, behavior: "smooth" });
-      dots.forEach(function (d, j) { d.setAttribute("aria-selected", String(j === index)); });
+      mark();
       prev.disabled = next.disabled = slides.length < 2;
     }
+
+    // Keep the dots in sync when the track is swiped (mobile).
+    track.addEventListener("scroll", function () {
+      var i = Math.round(track.scrollLeft / track.clientWidth);
+      if (i !== index && i >= 0 && i < slides.length) { index = i; mark(); }
+    }, { passive: true });
 
     prev.addEventListener("click", function () { go(index - 1); });
     next.addEventListener("click", function () { go(index + 1); });
